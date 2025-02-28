@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="es">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Tienda de peluches </title>
+
+
+<style>
+
+
+body {
+
+
+font-family: H1;
+
+
+background-color: #f0f0f0;
+
+
+margin: 0;
+
+
+padding: 0;
+
+
+background-image: url:"C:\Users\Alumno\Downloads\descarga.png"
+
+
+background-size: cover;
+
+
+background-position: center;
+
+
+}
+
+
+
+
+
+
+header {
+
+
+background-color:pink;
+
+
+text-align: center;
+
+
+padding: 20px 0;
+
+
+}
+
+
+
+
+
+
+.moving-title {
+
+
+display: inline-block;
+
+
+white-space: nowrap;
+
+
+overflow: hidden;
+
+
+box-sizing: border-box;
+
+
+animation: moveTitle 10s linear infinite;
+
+
+}
+
+
+
+
+
+
+@keyframes moveTitle {
+
+
+0% {
+
+
+transform: translateX(100%);
+
+
+}
+
+
+100% {
+
+
+transform: translateX(-100%);
+
+
+}
+
+
+}
+
+
+
+
+
+
+.menu {
+
+
+background-color:#C39BD3;
+
+
+overflow: hidden;
+
+
+}
+
+
+
+
+
+
+.menu a {
+
+
+float: left;
+
+
+display: block;
+
+
+color: white;
+
+
+text-align: center;
+
+
+padding: 14px 16px;
+
+
+text-decoration: none;
+
+
+}
+
+
+
+
+
+
+.menu a:hover {
+
+
+background-color: red;
+
+
+color: black;
+
+
+}
+
+
+
+
+
+
+.logo {
+
+
+text-align: center;
+
+
+margin: 10px 0;
+
+
+}
+
+
+
+
+
+
+.logo img {
+
+
+width: 40%;
+
+
+height: auto;
+
+
+}
+
+
+
+
+
+
+.productos {
+
+
+margin: 20px;
+
+
+}
+
+
+
+
+
+
+.producto {
+
+
+background-color: pink;
+
+
+border: 1px solid #ddd;
+
+
+border-radius: 5px;
+
+
+margin-bottom: 20px;
+
+
+padding: 10px;
+
+
+text-align: center;
+
+
+}
+
+
+
+
+
+
+.producto img {
+
+
+width: 40%;
+
+
+height: auto;
+
+
+border-radius: 1px;
+
+
+}
+
+
+
+
+
+
+.producto p {
+
+
+font-size: 18px;
+
+
+color: blue;
+
+
+}
+
+
+
+
+
+
+.cta {
+
+
+text-align: center;
+
+
+margin: 20px;
+
+
+}
+
+
+
+
+
+
+.cta button {
+
+
+background-color:#A3E4D7;
+
+
+border: none;
+
+
+padding: 10px 20px;
+
+
+font-size: 16px;
+
+
+cursor: pointer;
+
+
+border-radius: 5px;
+
+
+}
+
+
+
+
+
+
+.cta button:hover {
+
+
+background-color: #ff9900;
+
+
+}
+
+
+
+
+
+
+.footer {
+
+
+background-color: #333;
+
+
+color: white;
+
+
+text-align: center;
+
+
+padding: 10px 0;
+
+
+position: fixed;
+
+
+width: 100%;
+
+
+bottom: 0;
+
+
+}
+
+
+
+
+
+
+.formulario {
+
+
+margin: 20px;
+
+
+text-align: center;
+
+
+}
+
+
+
+
+
+
+.formulario input, .formulario textarea {
+
+
+margin-bottom: 10px;
+
+
+padding: 10px;
+
+
+width: 100%;
+
+
+max-width: 500px;
+
+
+border-radius: 5px;
+
+
+border: 1px solid #ddd;
+
+
+}
+
+
+
+
+
+
+.formulario button {
+
+
+background-color: #ffcc00;
+
+
+border: none;
+
+
+padding: 10px 20px;
+
+
+font-size: 16px;
+
+
+cursor: pointer;
+
+
+border-radius: 5px;
+
+
+}
+
+
+
+
+
+
+.formulario button:hover {
+
+
+background-color: #ff9900;
+
+
+}
+
+
+
+
+
+
+.links {
+
+
+margin: 20px;
+
+
+}
+
+
+
+
+
+
+.links ul {
+
+
+list-style-type: none;
+
+
+padding: 0;
+
+
+}
+
+
+
+
+
+
+.links li {
+
+
+margin: 10px 0;
+
+
+}
+
+
+
+
+
+
+.links a {
+
+
+color: #333;
+
+
+text-decoration: none;
+
+
+}
+
+
+
+
+
+
+.links a:hover {
+
+
+text-decoration: underline;
+
+
+}
+
+
+
+
+
+
+.tabla-productos {
+
+
+width: 100%;
+
+
+max-width: 800px;
+
+
+margin: 20px auto;
+
+
+background-color: #fff;
+
+
+border: 1px solid #ddd;
+
+
+border-radius: 5px;
+
+
+}
+
+
+
+
+
+
+.tabla-productos table {
+
+
+width: 100%;
+
+
+border-collapse: collapse;
+
+
+}
+
+
+
+
+
+
+.tabla-productos td, .tabla-productos th {
+
+
+border: 1px solid #C39BD3 ;
+
+
+padding: 8px;
+
+
+text-align: center;
+
+
+}
+
+
+
+
+
+
+.tabla-productos img {
+
+
+width: 100px;
+
+
+height: auto;
+
+
+border-radius: 5px;
+
+
+}
+
+
+
+
+
+
+.tabla-productos ul {
+
+
+list-style-type: disc;
+
+
+padding-left: 20px;
+
+
+text-align: left;
+
+
+}
+
+
+
+
+
+
+.tabla-productos li {
+
+
+margin: 5px 0;
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<h1 class="moving-title">ABRAZO DE FELPA </h1>
+
+
+</header>
+
+
+<div class="menu">
+
+
+<a href="#inicio">Inicio</a>
+
+
+<a href="#productos">Productos</a>
+
+
+<a href="#contacto">Contacto</a>
+
+
+</div>
+
+
+<div class="logo">
+
+
+<img src="C:/Users/Alumno.SALA1-07/Downloads/st,small,507x507-pad,600x600,f8f8f8.u11.jpg" alt="Logo">
+
+
+</div>
+
+
+<section class="productos" id="productos">
+
+
+<h2>Nuestros Productos</h2>
+
+
+<div class="producto">
+
+
+<img src="C:/Users/Alumno.SALA1-07/Downloads/images.jpg" alt="Peluche rushton">
+
+
+<p> Peluche rushton $250</p>
+
+
+</div>
+
+
+<div class="producto">
+
+
+<img src="C:/Users/Alumno.SALA1-07/Downloads/il_570xN.4285889124_jacy.webp" alt="Peluche rushton">
+
+
+<p>Peluche rushton$620</p>
+
+
+</div>
+
+
+<div class="producto">
+
+
+<img src="C:/Users/Alumno.SALA1-07/Downloads/$_32.jpg" alt="Peluche rushton">
+
+
+<p>Peluche rushton$450</p>
+
+
+</div>
+
+
+<div class="producto">
+
+
+<img src="C:/Users/Alumno.SALA1-07/Downloads/il_fullxfull.5992955329_bxbu.webp" alt="Peluche rushton">
+
+
+<p>Peluche rushton$200</p>
+
+
+</div>
+
+
+</section>
+
+
+<div class="cta">
+
+
+<button>¡Compra Ahora!</button>
+
+
+</div>
+
+
+<div class="formulario" id="contacto">
+
+
+<h2>Contacto</h2>
+
+
+<input type="text" placeholder="Nombre" required>
+
+
+<input type="email" placeholder="Correo Electrónico" required>
+
+
+<textarea placeholder="Mensaje" required></textarea>
+
+
+<button>Enviar</button>
+
+
+</div>
+
+
+<section class="links" id="links">
+
+
+<h2>Links Útiles</h2>
+
+
+<ul>
+
+
+<li><a href="https://es.pinterest.com/maykaesbe83/rushton-vintage-toys/"target="_blank">Ofertas de peluches rushton </a></li>
+
+
+<li><a href="https://www.etsy.com/mx/market/rushton_toys" target="_blank">tienda de peluches rushton</a></li>
+
+
+</ul>
+
+
+</section>
+
+
+<div class="tabla-productos">
+
+
+<table>
+
+
+<tr>
+
+
+<th>Imagen</th>
+
+
+<th>Descripción</th>
+
+
+</tr>
+
+
+<tr>
+
+
+<td><img src="C:/Users/Alumno.SALA1-07/Downloads/images.jpg" alt="Peluche rushton"></td>
+
+
+<td><ul><li>original,bonito,buena calidad </li></ul></td>
+
+
+</tr>
+
+
+<tr>
+
+
+<td><img src="C:/Users/Alumno.SALA1-07/Downloads/il_570xN.4285889124_jacy.webp" alt="Peluche rushton"></td>
+
+
+<td><ul><li>original,bonito,buena calidad </li></ul></td>
+
+
+</tr>
+
+
+<tr>
+
+
+<td><img src="C:/Users/Alumno.SALA1-07/Downloads/$_32.jpg" alt="Peluche rushton"></td>
+
+
+<td><ul><li>original,bonito,buena calidad </li></ul></td>
+
+
+</tr>
+
+
+<tr>
+
+
+<td><img src="C:/Users/Alumno.SALA1-07/Downloads/il_fullxfull.5992955329_bxbu.webp" alt="Peluche rushton"></td>
+
+
+<td><ul><li>original,bonito,buena calidad </li></ul></td>
+
+
+</tr>
+
+
+</table>
+
+
+</div>
+
+
+<h2>Uso de comandos para acentos</h2>
+
+
+<ol>
+
+
+<li>&aacute; - á</li>
+
+
+<li>&eacute; - é</li>
+
+
+<li>&iacute; - í</li>
+
+
+<li>&oacute; - ó</li>
+
+
+<li>&uacute; - ú</li>
+
+
+<li>&Aacute; - Á</li>
+
+
+<li>&Eacute; - É</li>
+
+
+<li>&Iacute; - Í</li>
+
+
+<li>&Oacute; - Ó</li>
+
+
+<li>&Uacute; - Ú</li>
+
+
+<li>&ntilde; - ñ</li>
+
+
+<li>&Ntilde; - Ñ</li>
+
+
+</ol>
+
+
+</section>
+
+
+</footer>
+
+
+
+
+
+
+<footer class="footer">
+
+
+<p>© 2025 venta de juguetes .</p>
+
+
+</footer>
+
+
+</body>
+
+
+</html>
+
