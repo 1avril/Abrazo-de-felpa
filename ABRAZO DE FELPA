@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Mejores Obras de Van Gogh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery div {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .gallery p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Las Mejores Obras de Van Gogh</h1>
+    <div class="gallery">
+        <div>
+            <img src="4c464d27af88e5b585d20bd14d9c32db.jpg" alt="La Noche Estrellada">
+            <p>La Noche Estrellada</p>
+        </div>
+        <div>
+            <img src="3d5f79ef6bf264eb13791063f6d526aa.jpg" alt="Campo de Girasoles y Violinista">
+            <p>Campo de Girasoles y Violinista</p>
+        </div>
+        <div>
+            <img src="ee8f62b168540e94bf4307e9090e853d.jpg" alt="Retrato con Girasoles">
+            <p>Retrato con Girasoles</p>
+        </div>
+        <div>
+            <img src="75a3a9ea91dd0005dc1a59a0e30d213e.jpg" alt="Van Gogh en el Campo">
+            <p>Van Gogh en el Campo</p>
+        </div>
+    </div>
+</body>
+</html>
